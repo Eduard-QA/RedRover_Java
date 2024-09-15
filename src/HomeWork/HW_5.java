@@ -48,6 +48,9 @@ public class HW_5 {
         }
         System.out.println("The average of array is: " + (sum/array.length));
     }
+    public static void sumDoubleArray(){
+
+    }
 
 
 }
