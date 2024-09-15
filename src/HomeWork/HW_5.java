@@ -9,6 +9,7 @@ public class HW_5 {
         sumDoubleArray();
         maxDoubleArray();
         minDoubleArray();
+        countElementsDoubleArr();
     }
 
     public static void sumArr() {
@@ -79,7 +80,7 @@ public class HW_5 {
                 maxValArray = maxValue;
             }
         }
-        System.out.println("The maximum value of double array is: " + maxValArray);
+        System.out.println("The maximum value in the double array is: " + maxValArray);
     }
 
     public static void minDoubleArray() {
@@ -96,7 +97,19 @@ public class HW_5 {
                 minValArray = minValue;
             }
         }
-        System.out.println("The minimum value of double array is: " + minValArray);
+        System.out.println("The minimum value in the double array is: " + minValArray);
     }
 
+    public static void countElementsDoubleArr() {
+        int[][] array = {{1, 2, 3, 4, 5}, {6, 7, 8, 9}, {-1, -2, -3, -4}, {-5, -6}};
+        int countArr = 0;
+        for (int[] k : array) {
+            int count = 0;
+            for (int j : k) {
+                count++;
+            }
+            countArr += count;
+        }
+        System.out.println("The count of all elements in the double array is: " + countArr);
+    }
 }
