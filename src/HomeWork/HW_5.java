@@ -5,6 +5,7 @@ public class HW_5 {
         sumArr();
         maxArrayValue();
         minArrayValue();
+        getAverageArray();
     }
 
     public static void sumArr() {
@@ -38,5 +39,15 @@ public class HW_5 {
         }
         System.out.println("The minimum value in the array is: " + minValue);
     }
+
+    public static void getAverageArray(){
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int sum = 0;
+        for(int j : array){
+            sum += j;
+        }
+        System.out.println("The average of array is: " + (sum/array.length));
+    }
+
 
 }
