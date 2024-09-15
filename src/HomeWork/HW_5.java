@@ -6,6 +6,9 @@ public class HW_5 {
         maxArrayValue();
         minArrayValue();
         getAverageArray();
+        sumDoubleArray();
+        maxDoubleArray();
+        minDoubleArray();
     }
 
     public static void sumArr() {
@@ -15,7 +18,7 @@ public class HW_5 {
         for (int ar : array) {
             summa += ar;
         }
-        System.out.println("Summa elements of array is: " + summa);
+        System.out.println("The sum of elements in the array is: " + summa);
     }
 
     public static void maxArrayValue() {
@@ -40,17 +43,60 @@ public class HW_5 {
         System.out.println("The minimum value in the array is: " + minValue);
     }
 
-    public static void getAverageArray(){
+    public static void getAverageArray() {
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         int sum = 0;
-        for(int j : array){
+        for (int j : array) {
             sum += j;
         }
-        System.out.println("The average of array is: " + (sum/array.length));
-    }
-    public static void sumDoubleArray(){
-
+        System.out.println("The average of the array is: " + (sum / array.length));
     }
 
+    public static void sumDoubleArray() {
+        int[][] array = {{1, 2, 3, 4, 5}, {6, 7, 8, 9}, {-1, -2, -3, -4}, {-5, -6}};
+        int sumArray = 0;
+        for (int[] k : array) {
+            int sum = 0;
+            for (int j : k) {
+                sum += j;
+            }
+            sumArray += sum;
+        }
+        System.out.println("The sum of all elements in the double array is: " + sumArray);
+    }
+
+    public static void maxDoubleArray() {
+        int[][] array = {{1, 2, 3, 4, 5}, {6, 7, 8, 9}, {-1, -2, -3, -4}, {-5, -6}};
+        int maxValArray = Integer.MIN_VALUE;
+        for (int[] k : array) {
+            int maxValue = Integer.MIN_VALUE;
+            for (int j : k) {
+                if (j > maxValue) {
+                    maxValue = j;
+                }
+            }
+            if (maxValue > maxValArray) {
+                maxValArray = maxValue;
+            }
+        }
+        System.out.println("The maximum value of double array is: " + maxValArray);
+    }
+
+    public static void minDoubleArray() {
+        int[][] array = {{1, 2, 3, 4, 5}, {6, 7, 8, 9}, {-1, -2, -3, -4}, {-5, -6}};
+        int minValArray = Integer.MAX_VALUE;
+        for (int[] k : array) {
+            int minValue = Integer.MAX_VALUE;
+            for (int j : k) {
+                if (j < minValue) {
+                    minValue = j;
+                }
+            }
+            if (minValue < minValArray) {
+                minValArray = minValue;
+            }
+        }
+        System.out.println("The minimum value of double array is: " + minValArray);
+    }
 
 }
