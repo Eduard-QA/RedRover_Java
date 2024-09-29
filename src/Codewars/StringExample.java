@@ -5,6 +5,7 @@ public class StringExample {
 
         System.out.println(abbrevName("sam harris"));
         System.out.println(bestAbbrevName("Jack Rich"));
+        System.out.println(disemVowel("No offense but,\nYour writing is among the worst I've ever read"));
     }
 
     public static String abbrevName(String name) {
@@ -19,9 +20,7 @@ public class StringExample {
                 abbrev.append('.');
             }
         }
-        name = abbrev.toString();
-
-        return name;
+        return abbrev.toString();
     }
 
     public static String bestAbbrevName(String name) {
@@ -38,6 +37,21 @@ public class StringExample {
         return "throw towel";
     }
 
+    public static String disemVowel(String str) {
+        StringBuilder consonants = new StringBuilder();
+
+        for (char ch : str.toCharArray()) {
+            if (ch != 'a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u' &&
+                    ch != 'A' && ch != 'E' && ch != 'I' && ch != 'O' && ch != 'U') {
+                consonants.append(ch);
+            }
+        }
+
+        return consonants.toString();
+    }
+    public static String bestDisemVowel(String str) {
+        return str.replaceAll("[aAeEiIoOuU]", "");
+    }
 }
 
 
