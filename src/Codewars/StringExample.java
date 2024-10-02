@@ -3,9 +3,10 @@ package Codewars;
 public class StringExample {
     public static void main(String[] args) {
 
-        System.out.println(abbrevName("sam harris"));
-        System.out.println(bestAbbrevName("Jack Rich"));
-        System.out.println(disemVowel("No offense but,\nYour writing is among the worst I've ever read"));
+//        System.out.println(abbrevName("sam harris"));
+//        System.out.println(bestAbbrevName("Jack Rich"));
+//        System.out.println(disemVowel("No offense but,\nYour writing is among the worst I've ever read"));
+        System.out.println(maskify("123456789"));
     }
 
     public static String abbrevName(String name) {
@@ -49,10 +50,22 @@ public class StringExample {
 
         return consonants.toString();
     }
+
     public static String bestDisemVowel(String str) {
         return str.replaceAll("[aAeEiIoOuU]", "");
     }
+
+    public static String maskify(String str) {
+        StringBuilder sb = new StringBuilder(str);
+        if (sb.length() > 4) {
+            for (int i = 0; i < sb.length() - 4; i++) {
+                sb.setCharAt(i, '#');
+            }
+            return sb.toString();
+        } else return sb.toString();
+    }
 }
+
 
 
 
