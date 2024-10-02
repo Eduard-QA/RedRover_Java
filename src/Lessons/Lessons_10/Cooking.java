@@ -1,13 +1,18 @@
 package Lessons.Lessons_10;
 
 public class Cooking {
-    public static void main(String[] args){
-        Ingredient potatoes = new Ingredient();
-        potatoes.name = "potatoes";
-        potatoes.amount = "2 kg";
+    public static void main(String[] args) {
+        Ingredient potatoes = new SolidIngredient("potatoes", 1.5);
+        Ingredient milk = new LiquidIngredient("milk", 100);
+        Bottle cognac = new Bottle("cognac");
 
-        Ingredient milk = new Ingredient();
-        milk.name = "milk";
-        milk.amount = "100 ml";
+        Ingredient[] allIngredient = {potatoes, milk, cognac};
+        for (Ingredient ingredient : allIngredient) {
+            System.out.println(ingredient.howToMeasure()
+                    + ingredient.getDescription());
+        }
     }
+
 }
+
+
