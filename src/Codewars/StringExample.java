@@ -2,14 +2,13 @@ package Codewars;
 
 import java.util.Arrays;
 
-
 public class StringExample {
     public static void main(String[] args) {
 
-//        System.out.println(abbrevName("sam harris"));
-//        System.out.println(bestAbbrevName("Jack Rich"));
-//        System.out.println(disemVowel("No offense but,\nYour writing is among the worst I've ever read"));
-        // System.out.println(maskify("123456789"));
+        System.out.println(abbrevName("sam harris"));
+        System.out.println(bestAbbrevName("Jack Rich"));
+        System.out.println(disemVowel("No offense but,\nYour writing is among the worst I've ever read"));
+        System.out.println(maskify("123456789"));
         System.out.println(highAndLow("1 2 3 4 -5 67 89"));
     }
 
@@ -44,8 +43,8 @@ public class StringExample {
                 max = num;
             }
         }
-        for(int num:numbersInt){
-            if(min > num){
+        for (int num : numbersInt) {
+            if (min > num) {
                 min = num;
             }
         }
