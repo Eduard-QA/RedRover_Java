@@ -1,12 +1,16 @@
 package Codewars;
 
+import java.util.Arrays;
+
+
 public class StringExample {
     public static void main(String[] args) {
 
 //        System.out.println(abbrevName("sam harris"));
 //        System.out.println(bestAbbrevName("Jack Rich"));
 //        System.out.println(disemVowel("No offense but,\nYour writing is among the worst I've ever read"));
-        System.out.println(maskify("123456789"));
+        // System.out.println(maskify("123456789"));
+        System.out.println(highAndLow("1 2 3 4 -5 67 89"));
     }
 
     public static String abbrevName(String name) {
@@ -30,12 +34,22 @@ public class StringExample {
     }
 
     public static String highAndLow(String numbers) {
-       /*
-       highAndLow("1 2 3 4 5")  // return "5 1"
-       highAndLow("1 2 -3 4 5") // return "5 -3"
-       highAndLow("1 9 3 4 -5") // return "9 -5"
-        */
-        return "throw towel";
+        int[] numbersInt = Arrays.stream(numbers.split(" "))
+                .mapToInt(Integer::parseInt).toArray();
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+
+        for (int num : numbersInt) {
+            if (max < num) {
+                max = num;
+            }
+        }
+        for(int num:numbersInt){
+            if(min > num){
+                min = num;
+            }
+        }
+        return max + " " + min;
     }
 
     public static String disemVowel(String str) {
@@ -47,7 +61,6 @@ public class StringExample {
                 consonants.append(ch);
             }
         }
-
         return consonants.toString();
     }
 
