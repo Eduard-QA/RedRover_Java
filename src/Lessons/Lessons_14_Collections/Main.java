@@ -6,12 +6,15 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         listMethods(); // создание коллекции и основные методы
+        List<String> filterA = new ArrayList<>(List.of("ass", "bss", "att", "ghh", "a34"));
+        System.out.println(filterA);
+        System.out.println(filterStartWithA(filterA));
         mutable();    //new ArrayList<>(List.of("ww", "rr", "hh", "3")); => быстрое создание изменяемой коллекции
-        immutable();  //выдаст ошибку потому что формат List.of создает неизменяемую коллекцию
+//        immutable();  //выдаст ошибку потому что формат List.of создает неизменяемую коллекцию
 
     }
 
-    public static void listMethods(){
+    public static void listMethods() {
         String[] str = new String[5]; // массив содержащий 5 элементов
         List<String> strings = new ArrayList<>();  // List => самостоятельный класс
         strings.add("aa");
@@ -44,5 +47,15 @@ public class Main {
         System.out.println(mmu);
     }
 
+    private static List<String> filterStartWithA(List<String> strings) {
+        List<String> result = new ArrayList<>();
+        for (int i = 0; i < strings.size(); i++) {
+            String element = strings.get(i);
+            if (element.startsWith("a")) {
+                result.add(element);
+            }
+        }
+        return result;
+    }
 
 }
