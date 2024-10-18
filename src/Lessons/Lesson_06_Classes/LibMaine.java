@@ -1,4 +1,4 @@
-package Lessons.Lesson_06;
+package Lessons.Lesson_06_Classes;
 
 public class LibMaine {
     public static void main(String[] args) {
