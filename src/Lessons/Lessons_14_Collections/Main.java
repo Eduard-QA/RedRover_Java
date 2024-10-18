@@ -5,6 +5,13 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+        listMethods(); // создание коллекции и основные методы
+        mutable();    //new ArrayList<>(List.of("ww", "rr", "hh", "3")); => быстрое создание изменяемой коллекции
+        immutable();  //выдаст ошибку потому что формат List.of создает неизменяемую коллекцию
+
+    }
+
+    public static void listMethods(){
         String[] str = new String[5]; // массив содержащий 5 элементов
         List<String> strings = new ArrayList<>();  // List => самостоятельный класс
         strings.add("aa");
@@ -23,11 +30,6 @@ public class Main {
 
         strings.remove(1); // удаление элемента по индексу
         System.out.println(strings);
-        mutable();
-        //new ArrayList<>(List.of("ww", "rr", "hh", "3")); => создание изменяемой коллекции
-        immutable();  //выдаст ошибку потому что формат List.of создает неизменяемую коллекцию
-
-
     }
 
     public static void immutable() {
