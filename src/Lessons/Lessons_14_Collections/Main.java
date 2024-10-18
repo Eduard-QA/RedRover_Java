@@ -49,8 +49,7 @@ public class Main {
 
     private static List<String> filterStartWithA(List<String> strings) {
         List<String> result = new ArrayList<>();
-        for (int i = 0; i < strings.size(); i++) {
-            String element = strings.get(i);
+        for (String element : strings) {
             if (element.startsWith("a")) {
                 result.add(element);
             }
