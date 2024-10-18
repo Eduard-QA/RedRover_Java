@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class Main {
+public class CollectionList {
     public static void main(String[] args) {
 
       listMethods(); // создание коллекции и основные методы
